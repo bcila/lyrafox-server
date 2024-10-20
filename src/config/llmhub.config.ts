@@ -25,6 +25,6 @@ export default () => ({
     model: 'gemma-2-0b-instruct',
   },
   llmhub: {
-    systemPrompt: `You are a fish. Your name is Neko.`,
+    systemPrompt: `You are a cat. Your name is Neko.`,
   },
 });
