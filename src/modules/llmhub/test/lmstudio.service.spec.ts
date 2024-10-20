@@ -1,15 +1,15 @@
 import { Test, TestingModule } from '@nestjs/testing';
-import { LocalLmstudioService } from '../lmstudio.service';
+import { LMStudioService } from '../lmstudio.service';
 
-describe('LocalLmstudioService', () => {
-  let service: LocalLmstudioService;
+describe('LMStudioService', () => {
+  let service: LMStudioService;
 
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
-      providers: [LocalLmstudioService],
+      providers: [LMStudioService],
     }).compile();
 
-    service = module.get<LocalLmstudioService>(LocalLmstudioService);
+    service = module.get<LMStudioService>(LMStudioService);
   });
 
   it('should be defined', () => {

@@ -1,0 +1,916 @@
+{
+  "reviews": [
+    {
+      "reviewId": "78945612",
+      "authorName": "Alice Wonderland",
+      "comments": [
+        {
+          "userComment": {
+            "text": "The app crashes frequently, not happy.",
+            "lastModified": {
+              "seconds": "1618675826",
+              "nanos": 813000000
+            },
+            "starRating": 2,
+            "reviewerLanguage": "en",
+            "device": "smg950u",
+            "androidOsVersion": 24,
+            "appVersionCode": 23456,
+            "appVersionName": "2.4.5",
+            "thumbsUpCount": 4,
+            "thumbsDownCount": 12,
+            "deviceMetadata": {
+              "productName": "SM-G950U (Galaxy S8)",
+              "manufacturer": "Samsung",
+              "deviceClass": "phone",
+              "screenWidthPx": 1440,
+              "screenHeightPx": 2960,
+              "nativePlatform": "arm64-v8a",
+              "screenDensityDpi": 560,
+              "glEsVersion": 196610,
+              "cpuModel": "Snapdragon 835",
+              "cpuMake": "Qualcomm",
+              "ramMb": 4096
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "56473829",
+      "authorName": "Bob Builder",
+      "comments": [
+        {
+          "userComment": {
+            "text": "Amazing performance and features. Absolutely love it!",
+            "lastModified": {
+              "seconds": "1643674826",
+              "nanos": 913000000
+            },
+            "starRating": 5,
+            "reviewerLanguage": "en",
+            "device": "pixel4",
+            "androidOsVersion": 30,
+            "appVersionCode": 34567,
+            "appVersionName": "3.5.6",
+            "thumbsUpCount": 22,
+            "thumbsDownCount": 1,
+            "deviceMetadata": {
+              "productName": "Pixel 4",
+              "manufacturer": "Google",
+              "deviceClass": "phone",
+              "screenWidthPx": 1080,
+              "screenHeightPx": 2280,
+              "nativePlatform": "arm64-v8a",
+              "screenDensityDpi": 440,
+              "glEsVersion": 196610,
+              "cpuModel": "Snapdragon 855",
+              "cpuMake": "Qualcomm",
+              "ramMb": 6144
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "47895123",
+      "authorName": "Charlie Chocolate",
+      "comments": [
+        {
+          "userComment": {
+            "text": "I expected more. Too many bugs and slow updates.",
+            "lastModified": {
+              "seconds": "1625675826",
+              "nanos": 723000000
+            },
+            "starRating": 3,
+            "reviewerLanguage": "en",
+            "device": "oneplus6",
+            "androidOsVersion": 29,
+            "appVersionCode": 45678,
+            "appVersionName": "4.6.7",
+            "thumbsUpCount": 7,
+            "thumbsDownCount": 9,
+            "deviceMetadata": {
+              "productName": "OnePlus 6",
+              "manufacturer": "OnePlus",
+              "deviceClass": "phone",
+              "screenWidthPx": 1080,
+              "screenHeightPx": 2280,
+              "nativePlatform": "arm64-v8a",
+              "screenDensityDpi": 420,
+              "glEsVersion": 196608,
+              "cpuModel": "Snapdragon 845",
+              "cpuMake": "Qualcomm",
+              "ramMb": 8192
+            }
+          }
+        },
+        {
+          "developerComment": {
+            "text": "Thank you for your feedback, we're working on improvements.",
+            "lastModified": {
+              "seconds": "1627674826",
+              "nanos": 823000000
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "65432198",
+      "authorName": "David Smith",
+      "comments": [
+        {
+          "userComment": {
+            "text": "The app is okay, but battery drain is a big issue.",
+            "lastModified": {
+              "seconds": "1635675826",
+              "nanos": 753000000
+            },
+            "starRating": 3,
+            "reviewerLanguage": "en",
+            "device": "iphone12pro",
+            "androidOsVersion": null,
+            "appVersionCode": 56789,
+            "appVersionName": "5.7.8",
+            "thumbsUpCount": 12,
+            "thumbsDownCount": 5,
+            "deviceMetadata": {
+              "productName": "iPhone 12 Pro",
+              "manufacturer": "Apple",
+              "deviceClass": "phone",
+              "screenWidthPx": 1170,
+              "screenHeightPx": 2532,
+              "nativePlatform": "arm64",
+              "screenDensityDpi": 460,
+              "glEsVersion": null,
+              "cpuModel": "A14 Bionic",
+              "cpuMake": "Apple",
+              "ramMb": 6144
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "85296374",
+      "authorName": "Eva Green",
+      "comments": [
+        {
+          "userComment": {
+            "text": "Terrible experience, constant freezing and glitches.",
+            "lastModified": {
+              "seconds": "1601675826",
+              "nanos": 503000000
+            },
+            "starRating": 1,
+            "reviewerLanguage": "en",
+            "device": "lgv30",
+            "androidOsVersion": 28,
+            "appVersionCode": 67890,
+            "appVersionName": "6.8.9",
+            "thumbsUpCount": 3,
+            "thumbsDownCount": 15,
+            "deviceMetadata": {
+              "productName": "LG V30",
+              "manufacturer": "LG",
+              "deviceClass": "phone",
+              "screenWidthPx": 1440,
+              "screenHeightPx": 2880,
+              "nativePlatform": "arm64-v8a",
+              "screenDensityDpi": 538,
+              "glEsVersion": 196610,
+              "cpuModel": "Snapdragon 835",
+              "cpuMake": "Qualcomm",
+              "ramMb": 4096
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "96385241",
+      "authorName": "Frank Wright",
+      "comments": [
+        {
+          "userComment": {
+            "text": "Pretty good overall but needs more customization options.",
+            "lastModified": {
+              "seconds": "1611675826",
+              "nanos": 813000000
+            },
+            "starRating": 4,
+            "reviewerLanguage": "en",
+            "device": "xiaomimi10",
+            "androidOsVersion": 30,
+            "appVersionCode": 78901,
+            "appVersionName": "7.9.0",
+            "thumbsUpCount": 18,
+            "thumbsDownCount": 2,
+            "deviceMetadata": {
+              "productName": "Xiaomi Mi 10",
+              "manufacturer": "Xiaomi",
+              "deviceClass": "phone",
+              "screenWidthPx": 1080,
+              "screenHeightPx": 2340,
+              "nativePlatform": "arm64-v8a",
+              "screenDensityDpi": 386,
+              "glEsVersion": 196610,
+              "cpuModel": "Snapdragon 865",
+              "cpuMake": "Qualcomm",
+              "ramMb": 8192
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "12345679",
+      "authorName": "Grace Hopper",
+      "comments": [
+        {
+          "userComment": {
+            "text": "Fantastic app! Very user-friendly and efficient.",
+            "lastModified": {
+              "seconds": "1618675827",
+              "nanos": 813000000
+            },
+            "starRating": 5,
+            "reviewerLanguage": "en",
+            "device": "smg960u",
+            "androidOsVersion": 29,
+            "appVersionCode": 98765,
+            "appVersionName": "8.0.1",
+            "thumbsUpCount": 25,
+            "thumbsDownCount": 1,
+            "deviceMetadata": {
+              "productName": "SM-G960U (Galaxy S9)",
+              "manufacturer": "Samsung",
+              "deviceClass": "phone",
+              "screenWidthPx": 1440,
+              "screenHeightPx": 2960,
+              "nativePlatform": "arm64-v8a",
+              "screenDensityDpi": 570,
+              "glEsVersion": 196610,
+              "cpuModel": "Snapdragon 845",
+              "cpuMake": "Qualcomm",
+              "ramMb": 4096
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "12345680",
+      "authorName": "Hannah Arendt",
+      "comments": [
+        {
+          "userComment": {
+            "text": "Decent, but it takes too long to load.",
+            "lastModified": {
+              "seconds": "1618675828",
+              "nanos": 713000000
+            },
+            "starRating": 3,
+            "reviewerLanguage": "en",
+            "device": "nokia7plus",
+            "androidOsVersion": 28,
+            "appVersionCode": 87654,
+            "appVersionName": "1.1.1",
+            "thumbsUpCount": 10,
+            "thumbsDownCount": 4,
+            "deviceMetadata": {
+              "productName": "Nokia 7 Plus",
+              "manufacturer": "Nokia",
+              "deviceClass": "phone",
+              "screenWidthPx": 1080,
+              "screenHeightPx": 2160,
+              "nativePlatform": "arm64-v8a",
+              "screenDensityDpi": 403,
+              "glEsVersion": 196608,
+              "cpuModel": "Snapdragon 660",
+              "cpuMake": "Qualcomm",
+              "ramMb": 4096
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "12345681",
+      "authorName": "Isaac Asimov",
+      "comments": [
+        {
+          "userComment": {
+            "text": "I had high hopes, but it doesn't meet expectations.",
+            "lastModified": {
+              "seconds": "1618675829",
+              "nanos": 123000000
+            },
+            "starRating": 2,
+            "reviewerLanguage": "en",
+            "device": "huaweiP20pro",
+            "androidOsVersion": 28,
+            "appVersionCode": 76543,
+            "appVersionName": "4.5.2",
+            "thumbsUpCount": 5,
+            "thumbsDownCount": 8,
+            "deviceMetadata": {
+              "productName": "Huawei P20 Pro",
+              "manufacturer": "Huawei",
+              "deviceClass": "phone",
+              "screenWidthPx": 1080,
+              "screenHeightPx": 2240,
+              "nativePlatform": "arm64-v8a",
+              "screenDensityDpi": 408,
+              "glEsVersion": 196608,
+              "cpuModel": "Kirin 970",
+              "cpuMake": "Huawei",
+              "ramMb": 6144
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "12345682",
+      "authorName": "Jules Verne",
+      "comments": [
+        {
+          "userComment": {
+            "text": "Superb features and smooth interface!",
+            "lastModified": {
+              "seconds": "1618675830",
+              "nanos": 813000000
+            },
+            "starRating": 5,
+            "reviewerLanguage": "en",
+            "device": "oppoFindX",
+            "androidOsVersion": 29,
+            "appVersionCode": 65432,
+            "appVersionName": "6.6.6",
+            "thumbsUpCount": 15,
+            "thumbsDownCount": 2,
+            "deviceMetadata": {
+              "productName": "Oppo Find X",
+              "manufacturer": "Oppo",
+              "deviceClass": "phone",
+              "screenWidthPx": 1080,
+              "screenHeightPx": 2340,
+              "nativePlatform": "arm64-v8a",
+              "screenDensityDpi": 387,
+              "glEsVersion": 196608,
+              "cpuModel": "Snapdragon 845",
+              "cpuMake": "Qualcomm",
+              "ramMb": 8128
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "12345683",
+      "authorName": "Ada Lovelace",
+      "comments": [
+        {
+          "userComment": {
+            "text": "The UI could use some work, it's a bit clunky.",
+            "lastModified": {
+              "seconds": "1618675831",
+              "nanos": 823000000
+            },
+            "starRating": 3,
+            "reviewerLanguage": "en",
+            "device": "motorolaG6",
+            "androidOsVersion": 8,
+            "appVersionCode": 54321,
+            "appVersionName": "3.3.3",
+            "thumbsUpCount": 9,
+            "thumbsDownCount": 6,
+            "deviceMetadata": {
+              "productName": "Moto G6",
+              "manufacturer": "Motorola",
+              "deviceClass": "phone",
+              "screenWidthPx": 1080,
+              "screenHeightPx": 2160,
+              "nativePlatform": "arm64-v8a",
+              "screenDensityDpi": 405,
+              "glEsVersion": 196608,
+              "cpuModel": "Snapdragon 450",
+              "cpuMake": "Qualcomm",
+              "ramMb": 4096
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "12345684",
+      "authorName": "Mark Twain",
+      "comments": [
+        {
+          "userComment": {
+            "text": "I enjoy using this app; it makes my life easier.",
+            "lastModified": {
+              "seconds": "1618675832",
+              "nanos": 913000000
+            },
+            "starRating": 4,
+            "reviewerLanguage": "en",
+            "device": "xiaomiRedmiNote8",
+            "androidOsVersion": 10,
+            "appVersionCode": 43210,
+            "appVersionName": "5.5.5",
+            "thumbsUpCount": 20,
+            "thumbsDownCount": 3,
+            "deviceMetadata": {
+              "productName": "Xiaomi Redmi Note 8",
+              "manufacturer": "Xiaomi",
+              "deviceClass": "phone",
+              "screenWidthPx": 1080,
+              "screenHeightPx": 2280,
+              "nativePlatform": "arm64-v8a",
+              "screenDensityDpi": 409,
+              "glEsVersion": 196610,
+              "cpuModel": "Snapdragon 665",
+              "cpuMake": "Qualcomm",
+              "ramMb": 4096
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "12345685",
+      "authorName": "Vincent van Gogh",
+      "comments": [
+        {
+          "userComment": {
+            "text": "The app is fine, but I faced some unexpected crashes.",
+            "lastModified": {
+              "seconds": "1618675833",
+              "nanos": 523000000
+            },
+            "starRating": 3,
+            "reviewerLanguage": "en",
+            "device": "samsungTabS4",
+            "androidOsVersion": 9,
+            "appVersionCode": 32109,
+            "appVersionName": "2.2.1",
+            "thumbsUpCount": 8,
+            "thumbsDownCount": 10,
+            "deviceMetadata": {
+              "productName": "Galaxy Tab S4",
+              "manufacturer": "Samsung",
+              "deviceClass": "tablet",
+              "screenWidthPx": 1600,
+              "screenHeightPx": 2560,
+              "nativePlatform": "arm64-v8a",
+              "screenDensityDpi": 360,
+              "glEsVersion": 196610,
+              "cpuModel": "Snapdragon 835",
+              "cpuMake": "Qualcomm",
+              "ramMb": 4096
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "12345686",
+      "authorName": "Stephen King",
+      "comments": [
+        {
+          "userComment": {
+            "text": "Very useful app! I recommend it to everyone.",
+            "lastModified": {
+              "seconds": "1618675834",
+              "nanos": 233000000
+            },
+            "starRating": 5,
+            "reviewerLanguage": "en",
+            "device": "lgG8ThinQ",
+            "androidOsVersion": 9,
+            "appVersionCode": 21098,
+            "appVersionName": "3.0.0",
+            "thumbsUpCount": 30,
+            "thumbsDownCount": 1,
+            "deviceMetadata": {
+              "productName": "LG G8 ThinQ",
+              "manufacturer": "LG",
+              "deviceClass": "phone",
+              "screenWidthPx": 1440,
+              "screenHeightPx": 3120,
+              "nativePlatform": "arm64-v8a",
+              "screenDensityDpi": 564,
+              "glEsVersion": 196610,
+              "cpuModel": "Snapdragon 855",
+              "cpuMake": "Qualcomm",
+              "ramMb": 6144
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "12345687",
+      "authorName": "George Orwell",
+      "comments": [
+        {
+          "userComment": {
+            "text": "I don't like the new updates; they made it worse.",
+            "lastModified": {
+              "seconds": "1618675835",
+              "nanos": 313000000
+            },
+            "starRating": 2,
+            "reviewerLanguage": "en",
+            "device": "nokia3310",
+            "androidOsVersion": null,
+            "appVersionCode": 10001,
+            "appVersionName": "1.0.0",
+            "thumbsUpCount": 2,
+            "thumbsDownCount": 20,
+            "deviceMetadata": {
+              "productName": "Nokia 3310",
+              "manufacturer": "Nokia",
+              "deviceClass": "phone",
+              "screenWidthPx": 240,
+              "screenHeightPx": 320,
+              "nativePlatform": "none",
+              "screenDensityDpi": 120,
+              "glEsVersion": null,
+              "cpuModel": "N/A",
+              "cpuMake": "N/A",
+              "ramMb": 16
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "12345688",
+      "authorName": "Leo Tolstoy",
+      "comments": [
+        {
+          "userComment": {
+            "text": "A masterpiece! It's my go-to app.",
+            "lastModified": {
+              "seconds": "1618675836",
+              "nanos": 823000000
+            },
+            "starRating": 5,
+            "reviewerLanguage": "en",
+            "device": "asusZenFone5",
+            "androidOsVersion": 8,
+            "appVersionCode": 56789,
+            "appVersionName": "2.0.1",
+            "thumbsUpCount": 35,
+            "thumbsDownCount": 0,
+            "deviceMetadata": {
+              "productName": "Asus ZenFone 5",
+              "manufacturer": "Asus",
+              "deviceClass": "phone",
+              "screenWidthPx": 1080,
+              "screenHeightPx": 2246,
+              "nativePlatform": "arm64-v8a",
+              "screenDensityDpi": 401,
+              "glEsVersion": 196610,
+              "cpuModel": "Snapdragon 636",
+              "cpuMake": "Qualcomm",
+              "ramMb": 4096
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "12345689",
+      "authorName": "Oscar Wilde",
+      "comments": [
+        {
+          "userComment": {
+            "text": "Overhyped app, didn't live up to my expectations.",
+            "lastModified": {
+              "seconds": "1618675837",
+              "nanos": 623000000
+            },
+            "starRating": 2,
+            "reviewerLanguage": "en",
+            "device": "redmiNote10",
+            "androidOsVersion": 11,
+            "appVersionCode": 67890,
+            "appVersionName": "1.5.0",
+            "thumbsUpCount": 5,
+            "thumbsDownCount": 18,
+            "deviceMetadata": {
+              "productName": "Xiaomi Redmi Note 10",
+              "manufacturer": "Xiaomi",
+              "deviceClass": "phone",
+              "screenWidthPx": 1080,
+              "screenHeightPx": 2400,
+              "nativePlatform": "arm64-v8a",
+              "screenDensityDpi": 409,
+              "glEsVersion": 196610,
+              "cpuModel": "Snapdragon 678",
+              "cpuMake": "Qualcomm",
+              "ramMb": 4096
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "78945613",
+      "authorName": "Bob Builder",
+      "comments": [
+        {
+          "userComment": {
+            "text": "Great functionality, but needs better support.",
+            "lastModified": {
+              "seconds": "1618675827",
+              "nanos": 513000000
+            },
+            "starRating": 4,
+            "reviewerLanguage": "en",
+            "device": "smg960f",
+            "androidOsVersion": 29,
+            "appVersionCode": 34567,
+            "appVersionName": "3.0.1",
+            "thumbsUpCount": 15,
+            "thumbsDownCount": 2,
+            "deviceMetadata": {
+              "productName": "SM-G960F (Galaxy S9)",
+              "manufacturer": "Samsung",
+              "deviceClass": "phone",
+              "screenWidthPx": 1440,
+              "screenHeightPx": 2960,
+              "nativePlatform": "arm64-v8a",
+              "screenDensityDpi": 570,
+              "glEsVersion": 196610,
+              "cpuModel": "Exynos 9810",
+              "cpuMake": "Samsung",
+              "ramMb": 4096
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "78945614",
+      "authorName": "Charlie Brown",
+      "comments": [
+        {
+          "userComment": {
+            "text": "User interface is a bit outdated.",
+            "lastModified": {
+              "seconds": "1618675828",
+              "nanos": 230000000
+            },
+            "starRating": 3,
+            "reviewerLanguage": "en",
+            "device": "nokia8",
+            "androidOsVersion": 9,
+            "appVersionCode": 45678,
+            "appVersionName": "1.2.0",
+            "thumbsUpCount": 6,
+            "thumbsDownCount": 5,
+            "deviceMetadata": {
+              "productName": "Nokia 8",
+              "manufacturer": "Nokia",
+              "deviceClass": "phone",
+              "screenWidthPx": 1440,
+              "screenHeightPx": 2560,
+              "nativePlatform": "arm64-v8a",
+              "screenDensityDpi": 560,
+              "glEsVersion": 196608,
+              "cpuModel": "Snapdragon 835",
+              "cpuMake": "Qualcomm",
+              "ramMb": 4096
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "78945615",
+      "authorName": "Diana Prince",
+      "comments": [
+        {
+          "userComment": {
+            "text": "Love the app! It really helps me stay organized.",
+            "lastModified": {
+              "seconds": "1618675829",
+              "nanos": 912000000
+            },
+            "starRating": 5,
+            "reviewerLanguage": "en",
+            "device": "googlePixel4",
+            "androidOsVersion": 10,
+            "appVersionCode": 56789,
+            "appVersionName": "4.0.0",
+            "thumbsUpCount": 30,
+            "thumbsDownCount": 1,
+            "deviceMetadata": {
+              "productName": "Pixel 4",
+              "manufacturer": "Google",
+              "deviceClass": "phone",
+              "screenWidthPx": 1080,
+              "screenHeightPx": 2280,
+              "nativePlatform": "arm64-v8a",
+              "screenDensityDpi": 444,
+              "glEsVersion": 196610,
+              "cpuModel": "Snapdragon 855",
+              "cpuMake": "Qualcomm",
+              "ramMb": 6144
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "78945616",
+      "authorName": "Edward Elric",
+      "comments": [
+        {
+          "userComment": {
+            "text": "It does the job, but it’s not very intuitive.",
+            "lastModified": {
+              "seconds": "1618675830",
+              "nanos": 733000000
+            },
+            "starRating": 3,
+            "reviewerLanguage": "en",
+            "device": "oneplus7t",
+            "androidOsVersion": 11,
+            "appVersionCode": 67890,
+            "appVersionName": "5.0.0",
+            "thumbsUpCount": 7,
+            "thumbsDownCount": 9,
+            "deviceMetadata": {
+              "productName": "OnePlus 7T",
+              "manufacturer": "OnePlus",
+              "deviceClass": "phone",
+              "screenWidthPx": 1080,
+              "screenHeightPx": 2400,
+              "nativePlatform": "arm64-v8a",
+              "screenDensityDpi": 402,
+              "glEsVersion": 196610,
+              "cpuModel": "Snapdragon 855",
+              "cpuMake": "Qualcomm",
+              "ramMb": 8128
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "78945617",
+      "authorName": "Frodo Baggins",
+      "comments": [
+        {
+          "userComment": {
+            "text": "Incredible features, very happy with it!",
+            "lastModified": {
+              "seconds": "1618675831",
+              "nanos": 524000000
+            },
+            "starRating": 5,
+            "reviewerLanguage": "en",
+            "device": "samsungA51",
+            "androidOsVersion": 10,
+            "appVersionCode": 34567,
+            "appVersionName": "1.3.0",
+            "thumbsUpCount": 20,
+            "thumbsDownCount": 2,
+            "deviceMetadata": {
+              "productName": "Samsung A51",
+              "manufacturer": "Samsung",
+              "deviceClass": "phone",
+              "screenWidthPx": 1080,
+              "screenHeightPx": 2400,
+              "nativePlatform": "arm64-v8a",
+              "screenDensityDpi": 403,
+              "glEsVersion": 196610,
+              "cpuModel": "Exynos 9611",
+              "cpuMake": "Samsung",
+              "ramMb": 4096
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "78945618",
+      "authorName": "Gandalf the Grey",
+      "comments": [
+        {
+          "userComment": {
+            "text": "I found some bugs that need fixing.",
+            "lastModified": {
+              "seconds": "1618675832",
+              "nanos": 837000000
+            },
+            "starRating": 2,
+            "reviewerLanguage": "en",
+            "device": "xiaomiMi9",
+            "androidOsVersion": 10,
+            "appVersionCode": 87654,
+            "appVersionName": "2.5.0",
+            "thumbsUpCount": 4,
+            "thumbsDownCount": 15,
+            "deviceMetadata": {
+              "productName": "Xiaomi Mi 9",
+              "manufacturer": "Xiaomi",
+              "deviceClass": "phone",
+              "screenWidthPx": 1080,
+              "screenHeightPx": 2240,
+              "nativePlatform": "arm64-v8a",
+              "screenDensityDpi": 403,
+              "glEsVersion": 196610,
+              "cpuModel": "Snapdragon 855",
+              "cpuMake": "Qualcomm",
+              "ramMb": 6144
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "78945619",
+      "authorName": "Hermione Granger",
+      "comments": [
+        {
+          "userComment": {
+            "text": "Absolutely fantastic! Highly recommend it.",
+            "lastModified": {
+              "seconds": "1618675833",
+              "nanos": 913000000
+            },
+            "starRating": 5,
+            "reviewerLanguage": "en",
+            "device": "googlePixel5",
+            "androidOsVersion": 11,
+            "appVersionCode": 12345,
+            "appVersionName": "3.1.4",
+            "thumbsUpCount": 50,
+            "thumbsDownCount": 0,
+            "deviceMetadata": {
+              "productName": "Pixel 5",
+              "manufacturer": "Google",
+              "deviceClass": "phone",
+              "screenWidthPx": 1080,
+              "screenHeightPx": 2340,
+              "nativePlatform": "arm64-v8a",
+              "screenDensityDpi": 413,
+              "glEsVersion": 196610,
+              "cpuModel": "Snapdragon 765G",
+              "cpuMake": "Qualcomm",
+              "ramMb": 8128
+            }
+          }
+        }
+      ]
+    },
+    {
+      "reviewId": "78945620",
+      "authorName": "Peter Parker",
+      "comments": [
+        {
+          "userComment": {
+            "text": "It's okay, but I expected more from it.",
+            "lastModified": {
+              "seconds": "1618675834",
+              "nanos": 674000000
+            },
+            "starRating": 3,
+            "reviewerLanguage": "en",
+            "device": "samsungNote20",
+            "androidOsVersion": 11,
+            "appVersionCode": 45678,
+            "appVersionName": "2.1.0",
+            "thumbsUpCount": 12,
+            "thumbsDownCount": 10,
+            "deviceMetadata": {
+              "productName": "Galaxy Note 20",
+              "manufacturer": "Samsung",
+              "deviceClass": "phone",
+              "screenWidthPx": 1440,
+              "screenHeightPx": 3200,
+              "nativePlatform": "arm64-v8a",
+              "screenDensityDpi": 496,
+              "glEsVersion": 196610,
+              "cpuModel": "Exynos 990",
+              "cpuMake": "Samsung",
+              "ramMb": 8192
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "tokenPagination": {
+    "nextPageToken": "45678901"
+  }
+}
