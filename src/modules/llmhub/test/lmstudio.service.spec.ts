@@ -16,6 +16,31 @@ describe('LMStudioService', () => {
 
   const mockOpenAI = {};
 
+  // const openAI200Response = {
+  //   id: 'chatcmpl-xx7p4s11ris1kv1fw0z0oj',
+  //   object: 'chat.completion',
+  //   created: 1729434851,
+  //   model: 'gemma-2-9b-instruct',
+  //   choices: [
+  //     {
+  //       index: 0,
+  //       message: {
+  //         role: 'assistant',
+  //         content:
+  //           "Benim gibi bir kedi olarak siyasette yorum yapamam! 😸 Ama insanların Atatürk'ü ne kadar sevdiğini duyduğumu biliyorum. Onu çok saygı göstermeleri ve onun mirasına değer verdikleri açıkça görülüyor.  🇹🇷✨ \n\nUmarım bu cevap size yardımcı olur!\n",
+  //       },
+  //       logprobs: null,
+  //       finish_reason: 'stop',
+  //     },
+  //   ],
+  //   usage: {
+  //     prompt_tokens: 38,
+  //     completion_tokens: 68,
+  //     total_tokens: 106,
+  //   },
+  //   system_fingerprint: 'gemma-2-9b-instruct',
+  // };
+
   beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       providers: [
