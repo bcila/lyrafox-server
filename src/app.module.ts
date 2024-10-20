@@ -1,6 +1,4 @@
 import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { LlmHubModule } from './modules/llmhub/llmhub.module';
 import { ConfigModule } from '@nestjs/config';
 import llmhubConfig from './config/llmhub.config';
@@ -12,7 +10,7 @@ import llmhubConfig from './config/llmhub.config';
     }),
     LlmHubModule,
   ],
-  controllers: [AppController],
-  providers: [AppService],
+  controllers: [],
+  providers: [],
 })
 export class AppModule {}
