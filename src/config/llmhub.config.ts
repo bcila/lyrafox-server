@@ -21,7 +21,7 @@ export default () => ({
   // Local
   lmstudio: {
     apiKey: 'lm-studio',
-    baseURL: 'http://localhost:1234/v1',
+    baseURL: 'http://192.168.1.108:1234/v1',
     model: 'gemma-2-0b-instruct',
   },
   llmhub: {
