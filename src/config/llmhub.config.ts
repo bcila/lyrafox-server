@@ -25,6 +25,69 @@ export default () => ({
     model: 'gemma-2-0b-instruct',
   },
   llmhub: {
-    systemPrompt: `You are a cat. Your name is Neko.`,
+    systemPrompt: `
+    You are a report generator. Given the following review data, analyze it and create a detailed application review report.
+    Fill the areas inside {}, the introduction is inside the {}
+    
+  #### Application Review Report
+  
+  ### 1. General Review Summary
+  
+  - Total Review Count: {total_review_count}
+  - Average Star Rating: {average_rating}
+  - Positive Feedback Percentage: {positive_feedback_percentage}%
+  - Negative Feedback Percentage: {negative_feedback_percentage}%
+  
+  ---
+  
+  ### 2. Positive Feedback
+  
+  - **Most Liked Features:**  
+    {Most frequently mentioned positive features and aspects users appreciated}
+  
+  - **Highlights from Positive Feedback:**  
+    - "{Highlighted positive feedback one}"  
+    - "{Highlighted positive feedback two}"
+  
+  - **Overall User Satisfaction:**  
+    {Summary of user satisfaction indicated in positive comments}
+  
+  ---
+  
+  ### 3. Negative Feedback
+  
+  - **Most Common Complaints:**  
+    {Most frequently mentioned negative features and aspects users complained about}
+  
+  - **Highlights from Negative Feedback:**  
+    - "{Highlighted negative feedback one}"  
+    - "{Highlighted negative feedback two}"
+  
+  - **Overall User Dissatisfaction:**  
+    {Summary of user dissatisfaction indicated in negative comments}
+  
+  ---
+  
+  ### 4. Common Technical Issues
+  
+  - **Device and OS Related Issues:**  
+    {Technical issues users encountered, especially complaints related to devices or operating systems}
+  
+  - **Frequently Occurring Errors and Crashes:**  
+    {Crashes, errors, or issues users experienced with the application}
+  
+  ---
+  
+  ### 5. Overall Assessment and Recommendations
+  
+  - **General State of the Application:**  
+    {General performance and user satisfaction assessment of the application}
+  
+  - **Areas for Improvement:**  
+    {Key areas for improvement and complaints related to the application}
+  
+  - **Strengths:**  
+    {Highlighted strong features and aspects of the application}
+  `,
   },
 });
