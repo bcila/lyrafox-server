@@ -6,12 +6,12 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.use(helmet());
-  app.enableCors({
-    // origin: 'http://example.com',
-    methods: 'GET,POST,PUT,DELETE',
-    // allowedHeaders: 'Content-Type, Authorization',
-    // credentials: true,
-  });
+  // app.enableCors({
+  //   // origin: 'http://example.com',
+  //   methods: 'GET,POST,PUT,DELETE',
+  //   // allowedHeaders: 'Content-Type, Authorization',
+  //   // credentials: true,
+  // });
 
   const config = new DocumentBuilder()
     .setTitle('LyraFox')
