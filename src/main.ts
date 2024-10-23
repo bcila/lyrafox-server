@@ -5,7 +5,15 @@ import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
-  app.use(helmet());
+  app.use(
+    helmet({
+      contentSecurityPolicy: {
+        directives: {
+          upgradeInsecureRequests: [],
+        },
+      },
+    }),
+  );
   // app.enableCors({
   //   // origin: 'http://example.com',
   //   methods: 'GET,POST,PUT,DELETE',
