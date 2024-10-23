@@ -25,6 +25,7 @@ async function bootstrap() {
     .setTitle('LyraFox')
     .setDescription('The LyraFox API documentation')
     .setVersion('1.0')
+    .addServer('http://')
     .build();
 
   const documentFactory = () => SwaggerModule.createDocument(app, config);
