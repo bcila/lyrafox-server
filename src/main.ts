@@ -11,11 +11,7 @@ async function bootstrap() {
 
   app.use(
     helmet({
-      contentSecurityPolicy: {
-        directives: {
-          upgradeInsecureRequests: [],
-        },
-      },
+      contentSecurityPolicy: false,
     }),
   );
   // app.enableCors({
