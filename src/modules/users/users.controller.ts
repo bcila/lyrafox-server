@@ -4,14 +4,14 @@ import {
   Delete,
   Get,
   Param,
-  ParseIntPipe,
   Post,
   Put,
 } from '@nestjs/common';
 import { UsersService } from './users.service';
-import { CreateUserDto } from './dto/create.user.dto';
-import { UpdateUserDto } from './dto/update.user.dto';
+import { CreateUserDto } from './dto/create-user.dto';
+import { UpdateUserDto } from './dto/update-user.dto';
 import { ApiBody, ApiTags } from '@nestjs/swagger';
+import { Public } from '../../common/decorators/public.decorator';
 
 @ApiTags('Users')
 @Controller('users')
@@ -28,10 +28,11 @@ export class UsersController {
   }
 
   @Get(':id')
-  async getUser(@Param('id', ParseIntPipe) id: number) {
+  async getUser(@Param('id') id: string) {
     return await this.usersService.getUser(id);
   }
 
+  @Public()
   @ApiBody({ type: CreateUserDto })
   @Post()
   async createUser(@Body() createUserDto: CreateUserDto) {
@@ -41,14 +42,14 @@ export class UsersController {
   @ApiBody({ type: UpdateUserDto })
   @Put(':id')
   async updateUser(
-    @Param('id', ParseIntPipe) id: number,
+    @Param('id') id: string,
     @Body() updateUserDto: UpdateUserDto,
   ) {
     return await this.usersService.updateUser(id, updateUserDto);
   }
 
   @Delete(':id')
-  async deleteUser(@Param('id', ParseIntPipe) id: number) {
+  async deleteUser(@Param('id') id: string) {
     return await this.usersService.deleteUser(id);
   }
 }

@@ -1,8 +1,8 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { PrismaService } from '../database/prisma.service';
-import { CreateUserDto } from './dto/create.user.dto';
+import { CreateUserDto } from './dto/create-user.dto';
 import * as argon2 from 'argon2';
-import { UpdateUserDto } from './dto/update.user.dto';
+import { UpdateUserDto } from './dto/update-user.dto';
 import { User } from '@prisma/client';
 
 @Injectable()
@@ -11,15 +11,28 @@ export class UsersService {
     this.prismaService = prismaService;
   }
 
-  async getUsers(): Promise<Omit<User, 'password'>[]> {
-    const users = await this.prismaService.user.findMany({
-      select: { id: true, email: true, createdAt: true, updatedAt: true },
-    });
-
-    return users;
+  async findOne(email: string): Promise<User> {
+    try {
+      return await this.prismaService.user.findUnique({
+        where: { email },
+      });
+    } catch (error) {
+      throw error;
+    }
   }
 
-  async getUser(id: number): Promise<Omit<User, 'password'>> {
+  async getUsers(): Promise<Omit<User, 'password'>[]> {
+    try {
+      const users = await this.prismaService.user.findMany({
+        select: { id: true, email: true, createdAt: true, updatedAt: true },
+      });
+      return users;
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  async getUser(id: string): Promise<Omit<User, 'password'>> {
     const user = await this.prismaService.user.findUnique({
       where: { id: id },
       select: { id: true, email: true, createdAt: true, updatedAt: true },
@@ -51,7 +64,7 @@ export class UsersService {
   }
 
   async updateUser(
-    id: number,
+    id: string,
     updateUserDto: UpdateUserDto,
   ): Promise<Omit<User, 'password' | 'createdAt' | 'updatedAt'>> {
     const userUpdated = await this.prismaService.user.update({
@@ -63,7 +76,7 @@ export class UsersService {
   }
 
   async deleteUser(
-    id: number,
+    id: string,
   ): Promise<Omit<User, 'password' | 'createdAt' | 'updatedAt'>> {
     const isDeleted = await this.prismaService.user.delete({
       where: { id: id },
