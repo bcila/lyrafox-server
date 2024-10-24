@@ -3,6 +3,7 @@ import { PrismaService } from '../database/prisma.service';
 import { CreateUserDto } from './dto/create.user.dto';
 import * as argon2 from 'argon2';
 import { UpdateUserDto } from './dto/update.user.dto';
+import { User } from '@prisma/client';
 
 @Injectable()
 export class UsersService {
@@ -10,7 +11,7 @@ export class UsersService {
     this.prismaService = prismaService;
   }
 
-  async getUsers() {
+  async getUsers(): Promise<Omit<User, 'password'>[]> {
     const users = await this.prismaService.user.findMany({
       select: { id: true, email: true, createdAt: true, updatedAt: true },
     });
@@ -18,7 +19,7 @@ export class UsersService {
     return users;
   }
 
-  async getUser(id: number) {
+  async getUser(id: number): Promise<Omit<User, 'password'>> {
     const user = await this.prismaService.user.findUnique({
       where: { id: id },
       select: { id: true, email: true, createdAt: true, updatedAt: true },
@@ -27,17 +28,21 @@ export class UsersService {
     if (!user) {
       throw new NotFoundException(`User with id ${id} not found`);
     }
+
+    console.log(typeof user.createdAt);
     return user;
   }
 
-  async createUser(createUserDto: CreateUserDto) {
+  async createUser(
+    createUserDto: CreateUserDto,
+  ): Promise<Omit<User, 'password'>> {
     try {
       const user = await this.prismaService.user.create({
         data: {
           email: createUserDto.email,
           password: await argon2.hash(createUserDto.password),
         },
-        select: { id: true, email: true, createdAt: false, updatedAt: true },
+        select: { id: true, email: true, createdAt: true, updatedAt: true },
       });
       return user;
     } catch (error) {
@@ -45,7 +50,10 @@ export class UsersService {
     }
   }
 
-  async updateUser(id: number, updateUserDto: UpdateUserDto) {
+  async updateUser(
+    id: number,
+    updateUserDto: UpdateUserDto,
+  ): Promise<Omit<User, 'password' | 'createdAt' | 'updatedAt'>> {
     const userUpdated = await this.prismaService.user.update({
       where: { id: id },
       data: updateUserDto,
@@ -54,7 +62,9 @@ export class UsersService {
     return userUpdated;
   }
 
-  async deleteUser(id: number) {
+  async deleteUser(
+    id: number,
+  ): Promise<Omit<User, 'password' | 'createdAt' | 'updatedAt'>> {
     const isDeleted = await this.prismaService.user.delete({
       where: { id: id },
       select: { id: true, email: true },

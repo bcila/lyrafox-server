@@ -1,7 +1,9 @@
 import { Controller, Get } from '@nestjs/common';
 import { GooglePlayReviewerService } from './google-play-reviewer.service';
 import { LMStudioService } from '../llmhub/lmstudio.service';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('Google Play Reviewer')
 @Controller('google-play-reviewer')
 export class GooglePlayReviewerController {
   constructor(
