@@ -1,6 +1,7 @@
 import { Injectable, Inject } from '@nestjs/common';
 import OpenAI from 'openai';
 import { ConfigService } from '@nestjs/config';
+import { GROQ_OPENAI } from '../../common/constants';
 
 @Injectable()
 export class GroqService {
@@ -8,7 +9,7 @@ export class GroqService {
   private readonly systemPrompt: string;
 
   constructor(
-    @Inject('GroqOpenAI') private readonly client: OpenAI,
+    @Inject(GROQ_OPENAI) private readonly client: OpenAI,
     private readonly configService: ConfigService,
   ) {
     this.model = configService.get<string>('groq.model');

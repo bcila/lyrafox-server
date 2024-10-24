@@ -1,6 +1,7 @@
 import { Inject, Injectable } from '@nestjs/common';
 import { GenerativeModel, GoogleGenerativeAI } from '@google/generative-ai';
 import { ConfigService } from '@nestjs/config';
+import { GEMINI } from '../../common/constants';
 
 @Injectable()
 export class GeminiService {
@@ -9,7 +10,7 @@ export class GeminiService {
   private readonly systemPrompt: string;
 
   constructor(
-    @Inject('Gemini') private readonly genAI: GoogleGenerativeAI,
+    @Inject(GEMINI) private readonly genAI: GoogleGenerativeAI,
     private readonly configService: ConfigService,
   ) {
     this.model = this.configService.get<string>('gemini.model');

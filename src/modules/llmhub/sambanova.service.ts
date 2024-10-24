@@ -1,6 +1,7 @@
 import { Inject, Injectable } from '@nestjs/common';
 import OpenAI from 'openai';
 import { ConfigService } from '@nestjs/config';
+import { SAMBANOVA_OPENAI } from '../../common/constants';
 
 @Injectable()
 export class SambanovaService {
@@ -8,7 +9,7 @@ export class SambanovaService {
   private readonly systemPrompt: string;
 
   constructor(
-    @Inject('SambaNovaOpenAI') private readonly client: OpenAI,
+    @Inject(SAMBANOVA_OPENAI) private readonly client: OpenAI,
     private readonly configService: ConfigService,
   ) {
     this.model = configService.get<string>('sambanova.model');

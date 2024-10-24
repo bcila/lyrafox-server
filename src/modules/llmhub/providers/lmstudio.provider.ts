@@ -1,8 +1,9 @@
 import { ConfigService } from '@nestjs/config';
 import OpenAI from 'openai';
+import { LM_STUDIO } from '../../../common/constants';
 
 export const LMStudioProvider = {
-  provide: 'LMStudio',
+  provide: LM_STUDIO,
   useFactory: (configService: ConfigService) =>
     new OpenAI({
       apiKey: configService.getOrThrow('lmstudio.apiKey'),

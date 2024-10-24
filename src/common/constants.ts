@@ -1,0 +1,6 @@
+// PROVIDERS
+export const GROQ_OPENAI = 'GROQ_OPENAI';
+export const GEMINI = 'GEMINI';
+export const LM_STUDIO = 'LM_STUDIO';
+export const SAMBANOVA_OPENAI = 'SAMBANOVA_OPENAI';
+export const TOGETHERAI_OPENAI = 'TOGETHERAI_OPENAI';

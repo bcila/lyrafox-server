@@ -1,0 +1,90 @@
+{
+  "results": [
+    {
+      "email": "bnymyn.khrymy@example.com",
+      "login": {
+        "uuid": "4e708d22-d028-4099-8da1-f76f989e1b21",
+        "username": "redbird962",
+        "password": "sprint"
+      }
+    },
+    {
+      "email": "jen.kennedy@example.com",
+      "login": {
+        "uuid": "ad584500-97b7-471e-b211-864d24ca37ae",
+        "username": "redtiger994",
+        "password": "hope"
+      }
+    },
+    {
+      "email": "maja.petersen@example.com",
+      "login": {
+        "uuid": "39f20012-7303-499c-97e4-b7c5aa0bf6a4",
+        "username": "crazyostrich890",
+        "password": "dirty1"
+      }
+    },
+    {
+      "email": "eugenio.marquez@example.com",
+      "login": {
+        "uuid": "e5a1488c-77c4-49c1-9e6f-88212415846b",
+        "username": "organicmouse484",
+        "password": "343434"
+      }
+    },
+    {
+      "email": "florence.jones@example.com",
+      "login": {
+        "uuid": "a1f79075-209a-4606-8fba-170d413a9f9d",
+        "username": "ticklishbutterfly318",
+        "password": "wendy1"
+      }
+    },
+    {
+      "email": "ozsu.agaoglu@example.com",
+      "login": {
+        "uuid": "b196b127-ce45-43e4-ad29-4e9ed14efd13",
+        "username": "angryladybug864",
+        "password": "prime"
+      }
+    },
+    {
+      "email": "matthew.kumar@example.com",
+      "login": {
+        "uuid": "23740821-3d2a-466c-b154-c8d8c265a355",
+        "username": "happyswan311",
+        "password": "done"
+      }
+    },
+    {
+      "email": "dyn.rdyy@example.com",
+      "login": {
+        "uuid": "65e0ea7b-07d6-4c80-8d29-ba2966216c33",
+        "username": "organicswan808",
+        "password": "fmale"
+      }
+    },
+    {
+      "email": "gzl.zraay@example.com",
+      "login": {
+        "uuid": "ec1b65f8-624e-4b07-9d97-46e3b5701004",
+        "username": "bluecat875",
+        "password": "princess"
+      }
+    },
+    {
+      "email": "sahar.pullens@example.com",
+      "login": {
+        "uuid": "d037c274-5210-4a9b-9341-b3cb2e7cb8d5",
+        "username": "whitefrog328",
+        "password": "passthie"
+      }
+    }
+  ],
+  "info": {
+    "seed": "822e33fc0a3c3c80",
+    "results": 10,
+    "page": 1,
+    "version": "1.4"
+  }
+}

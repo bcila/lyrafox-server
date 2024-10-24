@@ -2,6 +2,7 @@ import { Inject, Injectable } from '@nestjs/common';
 import OpenAI from 'openai';
 import { ConfigService } from '@nestjs/config';
 import * as fs from 'node:fs';
+import { LM_STUDIO } from '../../common/constants';
 
 @Injectable()
 export class LMStudioService {
@@ -9,7 +10,7 @@ export class LMStudioService {
   private readonly systemPrompt: string;
 
   constructor(
-    @Inject('LMStudio') private readonly client: OpenAI,
+    @Inject(LM_STUDIO) private readonly client: OpenAI,
     private readonly configService: ConfigService,
   ) {
     this.model = this.configService.get<string>('lmstudio.model');

@@ -1,6 +1,7 @@
 import { Inject, Injectable } from '@nestjs/common';
 import OpenAI from 'openai';
 import { ConfigService } from '@nestjs/config';
+import { TOGETHERAI_OPENAI } from '../../common/constants';
 
 @Injectable()
 export class TogetherAIService {
@@ -8,7 +9,7 @@ export class TogetherAIService {
   private readonly systemPrompt: string;
 
   constructor(
-    @Inject('TogetherAIOpenAI') private readonly client: OpenAI,
+    @Inject(TOGETHERAI_OPENAI) private readonly client: OpenAI,
     private readonly configService: ConfigService,
   ) {
     this.model = configService.get<string>('togetherai.model');
