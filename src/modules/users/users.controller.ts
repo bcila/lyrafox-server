@@ -10,10 +10,11 @@ import {
 import { UsersService } from './users.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { ApiBody, ApiTags } from '@nestjs/swagger';
+import { ApiBearerAuth, ApiBody, ApiTags } from '@nestjs/swagger';
 import { Public } from '../../common/decorators/public.decorator';
 
 @ApiTags('Users')
+@ApiBearerAuth() // Swagger UI
 @Controller('users')
 export class UsersController {
   private readonly usersService: UsersService;
