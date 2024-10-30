@@ -4,14 +4,22 @@ import {
   Delete,
   Get,
   Param,
-  Post,
   Put,
+  Query,
+  UsePipes,
+  ValidationPipe,
 } from '@nestjs/common';
 import { UsersService } from './users.service';
-import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { ApiBearerAuth, ApiBody, ApiTags } from '@nestjs/swagger';
-import { Public } from '../../common/decorators/public.decorator';
+import { ApiBearerAuth, ApiBody, ApiQuery, ApiTags } from '@nestjs/swagger';
+import { ApiResponse, ApiResponseMeta } from '../../common/dto/response.dto';
+import {
+  DeleteUserResponse,
+  UserUpdateResponse,
+  UserWithoutPassword,
+} from './types/users.types';
+import { ApiStatus } from '../../common/enums/api-status.enum';
+import { UserQueryDto } from './dto/user-query.dto';
 
 @ApiTags('Users')
 @ApiBearerAuth() // Swagger UI
@@ -23,21 +31,53 @@ export class UsersController {
     this.usersService = usersService;
   }
 
-  @Get()
-  async getUsers() {
-    return await this.usersService.getUsers();
-  }
-
   @Get(':id')
-  async getUser(@Param('id') id: string) {
-    return await this.usersService.getUser(id);
+  async getUser(
+    @Param('id') id: string,
+  ): Promise<ApiResponse<UserWithoutPassword>> {
+    const user = await this.usersService.getUser(id);
+
+    return {
+      status: ApiStatus.SUCCESS,
+      data: user,
+    };
   }
 
-  @Public()
-  @ApiBody({ type: CreateUserDto })
-  @Post()
-  async createUser(@Body() createUserDto: CreateUserDto) {
-    return await this.usersService.createUser(createUserDto);
+  @Get()
+  @UsePipes(new ValidationPipe({ transform: true }))
+  @ApiQuery({
+    name: 'take',
+    required: false,
+    description: 'Number of items per page',
+    type: Number,
+  })
+  @ApiQuery({
+    name: 'skip',
+    required: false,
+    description: 'Page number',
+    type: Number,
+  })
+  async getUsers(
+    @Query() userQueryDto: UserQueryDto,
+  ): Promise<ApiResponse<UserWithoutPassword[]>> {
+    const { take = 10, skip = 0 } = userQueryDto;
+    console.log(userQueryDto);
+    const users: UserWithoutPassword[] = await this.usersService.getUsers({
+      take,
+      skip,
+    });
+    const meta: ApiResponseMeta = {
+      pageSize: take,
+      currentPage: skip,
+      totalItems: users.length,
+      totalPages: Math.ceil(users.length / skip),
+    };
+
+    return {
+      status: ApiStatus.SUCCESS,
+      data: users,
+      meta: meta,
+    };
   }
 
   @ApiBody({ type: UpdateUserDto })
@@ -45,12 +85,22 @@ export class UsersController {
   async updateUser(
     @Param('id') id: string,
     @Body() updateUserDto: UpdateUserDto,
-  ) {
-    return await this.usersService.updateUser(id, updateUserDto);
+  ): Promise<ApiResponse<UserUpdateResponse>> {
+    const updatedUser = await this.usersService.updateUser(id, updateUserDto);
+
+    return {
+      status: ApiStatus.SUCCESS,
+      data: updatedUser,
+    };
   }
 
   @Delete(':id')
-  async deleteUser(@Param('id') id: string) {
-    return await this.usersService.deleteUser(id);
+  async deleteUser(
+    @Param('id') id: string,
+  ): Promise<ApiResponse<DeleteUserResponse>> {
+    await this.usersService.deleteUser(id);
+    return {
+      status: ApiStatus.SUCCESS,
+    };
   }
 }

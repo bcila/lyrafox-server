@@ -13,6 +13,11 @@ import { LocalAuthGuard } from '../../common/guards/local-auth.guard';
 import { Public } from '../../common/decorators/public.decorator';
 import { RegisterDto } from './dto/register.dto';
 import { SignInDto } from './dto/sign-in.dto';
+import { CustomRequest } from '../../common/interfaces/custom-request.interface';
+import { ApiResponse } from '../../common/dto/response.dto';
+import { UserWithoutPassword } from '../users/types/users.types';
+import { ApiStatus } from '../../common/enums/api-status.enum';
+import { AccessToken } from './types/auth.types';
 
 @ApiTags('Auth')
 @Controller('auth')
@@ -24,13 +29,27 @@ export class AuthController {
   @UseGuards(LocalAuthGuard)
   @ApiBody({ type: SignInDto })
   @Post('login')
-  signIn(@Request() req) {
-    return this.authService.login(req.user);
+  async signIn(
+    @Request() req: CustomRequest,
+  ): Promise<ApiResponse<AccessToken>> {
+    const token: AccessToken = await this.authService.login(req.user);
+
+    return {
+      status: ApiStatus.SUCCESS,
+      data: token,
+    };
   }
 
   @Public()
   @Post('register')
-  register(@Body() registerDto: RegisterDto) {
-    return this.authService.register(registerDto);
+  async register(
+    @Body() registerDto: RegisterDto,
+  ): Promise<ApiResponse<UserWithoutPassword>> {
+    const newUser: UserWithoutPassword =
+      await this.authService.register(registerDto);
+    return {
+      status: ApiStatus.SUCCESS,
+      data: newUser,
+    };
   }
 }

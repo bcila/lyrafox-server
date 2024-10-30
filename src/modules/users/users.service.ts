@@ -1,9 +1,15 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
+import {
+  BadRequestException,
+  Injectable,
+  NotFoundException,
+} from '@nestjs/common';
 import { PrismaService } from '../database/prisma.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import * as argon2 from 'argon2';
 import { UpdateUserDto } from './dto/update-user.dto';
 import { User } from '@prisma/client';
+import { UserUpdateResponse, UserWithoutPassword } from './types/users.types';
+import { UserQueryDto } from './dto/user-query.dto';
 
 @Injectable()
 export class UsersService {
@@ -11,78 +17,91 @@ export class UsersService {
     this.prismaService = prismaService;
   }
 
+  // If you do not need password please do not use this method
   async findOne(email: string): Promise<User> {
-    try {
-      return await this.prismaService.user.findUnique({
-        where: { email: email },
-      });
-    } catch (error) {
-      throw error;
+    const user = await this.prismaService.user.findUnique({
+      where: { email: email },
+    });
+
+    if (!user) {
+      throw new NotFoundException('User not found');
     }
+
+    return user;
   }
 
-  async getUsers(): Promise<Omit<User, 'password'>[]> {
-    try {
-      const users = await this.prismaService.user.findMany({
-        select: { id: true, email: true, createdAt: true, updatedAt: true },
-      });
-      return users;
-    } catch (error) {
-      throw error;
-    }
-  }
-
-  async getUser(id: string): Promise<Omit<User, 'password'>> {
+  async getUser(id: string): Promise<UserWithoutPassword> {
     const user = await this.prismaService.user.findUnique({
       where: { id: id },
       select: { id: true, email: true, createdAt: true, updatedAt: true },
     });
 
     if (!user) {
-      throw new NotFoundException(`User with id ${id} not found`);
+      throw new NotFoundException(`User not found`);
     }
 
-    console.log(typeof user.createdAt);
     return user;
   }
 
-  async createUser(
-    createUserDto: CreateUserDto,
-  ): Promise<Omit<User, 'password'>> {
-    try {
-      const user = await this.prismaService.user.create({
-        data: {
-          email: createUserDto.email,
-          password: await argon2.hash(createUserDto.password),
-        },
-        select: { id: true, email: true, createdAt: true, updatedAt: true },
-      });
-      return user;
-    } catch (error) {
-      throw error;
+  async getUsers(userQueryDto: UserQueryDto): Promise<UserWithoutPassword[]> {
+    const { take, skip } = userQueryDto;
+    console.log('take', take, 'skip', skip);
+    const users = await this.prismaService.user.findMany({
+      select: { id: true, email: true, createdAt: true, updatedAt: true },
+      take: take,
+      skip: skip,
+    });
+
+    if (!users) {
+      throw new NotFoundException(`Users not found`);
     }
+
+    return users;
+  }
+
+  async createUser(createUserDto: CreateUserDto): Promise<UserWithoutPassword> {
+    const user = await this.prismaService.user.create({
+      data: {
+        email: createUserDto.email,
+        password: await argon2.hash(createUserDto.password),
+      },
+      select: { id: true, email: true, createdAt: true, updatedAt: true },
+    });
+
+    if (!user) {
+      throw new BadRequestException('Invalid user data');
+    }
+
+    return user;
   }
 
   async updateUser(
     id: string,
     updateUserDto: UpdateUserDto,
-  ): Promise<Omit<User, 'password' | 'createdAt' | 'updatedAt'>> {
-    const userUpdated = await this.prismaService.user.update({
+  ): Promise<UserUpdateResponse> {
+    const updatedUser = this.prismaService.user.update({
       where: { id: id },
       data: updateUserDto,
-      select: { id: true, email: true },
+      select: { id: true, email: true, createdAt: true, updatedAt: true },
     });
-    return userUpdated;
+
+    if (!updatedUser) {
+      throw new NotFoundException(`User not found`);
+    }
+
+    return updatedUser;
   }
 
-  async deleteUser(
-    id: string,
-  ): Promise<Omit<User, 'password' | 'createdAt' | 'updatedAt'>> {
+  async deleteUser(id: string): Promise<boolean> {
     const isDeleted = await this.prismaService.user.delete({
       where: { id: id },
-      select: { id: true, email: true },
+      select: { id: true },
     });
 
-    return isDeleted;
+    if (!isDeleted) {
+      throw new NotFoundException(`User not found`);
+    }
+
+    return !!isDeleted;
   }
 }

@@ -14,10 +14,8 @@ export class GooglePlayReviewerController {
 
   @Get('report')
   async generateReport() {
-    console.log('hi');
     const reviews = this.googlePlayReviewerService.getGooglePlayReviews();
     const report = await this.lmStudioService.generateReport(reviews);
-    console.log(report);
     return report;
   }
 }
